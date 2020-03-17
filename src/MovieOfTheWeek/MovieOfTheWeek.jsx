@@ -10,7 +10,7 @@ export default class MovieOfTheWeek extends React.Component {
             data: []
         };
 
-        this.url = 'http://www.laravel.test/movie-of-the-week';
+        this.url = '';
     }
 
     componentDidMount() {
@@ -47,39 +47,32 @@ export default class MovieOfTheWeek extends React.Component {
                 Loading
             </div>
         )
-
-        // console.log(this.state.data);
-
         if (!this.state.loading && this.state.loaded) {
             content = (
                 <>
                     <div className="movie">
 
-                        <img src={ this.state.data.poster_url } alt={ this.state.data.name } />
+                        <img src="https://m.media-amazon.com/images/M/MV5BNzAwNzUzNjY4MV5BMl5BanBnXkFtZTgwMTQ5MzM0NjM@._V1_UX182_CR0,0,182,268_AL_.jpg" alt="Venom" />
 
                         <div>
 
-                            <h3>{ this.state.data.name }</h3>
+                            <h3>Venom</h3>
 
-                        <div className="year">{ this.state.data.year } </div>
+                            <div className="year">2018</div>
 
                             <div className="genres">
-                                {
-                                    this.state.data.genres.map( genre => (
-                                        <span>{ genre.name }</span>
-                                    ))
-                                }
+                                <span>Action</span>
+                                <span>Horror</span>
+                                <span>Sci-Fi</span>
                             </div>
 
                             <div className="starring">
                                 <h4>Starring:</h4>
 
                                 <div>
-                                {
-                                    this.state.data.people.map( person => (
-                                        <span>{ person.name }</span>
-                                    ))
-                                }
+                                    <span>Tom Hardy</span>
+                                    <span>Michelle Williams</span>
+                                    <span>Riz Ahmed</span>
                                 </div>
                             </div>
 

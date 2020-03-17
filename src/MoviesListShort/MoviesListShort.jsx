@@ -10,7 +10,7 @@ export default class MoviesListShort extends React.Component {
             data: []
         };
 
-        this.url = 'http://www.laravel.test/top-movies';
+        this.url = '';
     }
 
     componentDidMount() {
@@ -47,22 +47,50 @@ export default class MoviesListShort extends React.Component {
                 Loading
             </div>
         )
-
-        // console.log(this.state.data);
-
         if (!this.state.loading && this.state.loaded) {
             content = (
                 <>
                     <ul>
-                        {
-                            this.state.data.map(movie => (
-                                <li>
-                                    { movie.name }                           
-                                    <div className="rating"> { movie.rating } </div>
-                                </li> 
-                            ))
-
-                        }
+                        <li>
+                            The Shawshank redemption                            
+                            <div className="rating">9.2</div>
+                        </li>
+                        <li>
+                            The Godfather                            
+                            <div className="rating">9.2</div>
+                        </li>
+                        <li>
+                            The Godfather II                            
+                            <div className="rating">9.0</div>
+                        </li>
+                        <li>
+                            Dark Knight                            
+                            <div className="rating">8.9</div>
+                        </li>
+                        <li>
+                            12 angry men                            
+                            <div className="rating">8.9</div>
+                        </li>
+                        <li>
+                            Schindler's list                            
+                            <div className="rating">8.9</div>
+                        </li>
+                        <li>
+                            Pulp fiction                            
+                            <div className="rating">8.9</div>
+                        </li>
+                        <li>
+                            Lord of the Rings: Return of the King                            
+                            <div className="rating">8.9</div>
+                        </li>
+                        <li>
+                            The good, the bad and the ugly                            
+                            <div className="rating">8.9</div>
+                        </li>
+                        <li>
+                            Fight club                            
+                            <div className="rating">8.8</div>
+                        </li>
                     </ul>
                 </>
             )
